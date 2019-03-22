@@ -4,9 +4,9 @@ a distributed task module
 ## version 0.1.0
 Supporting distributed services, find the first service registered to Eureka as master, and then the master performs timing tasks.
 
-use example as follows:
+* use example as follows:* 
 
-step1:
+** step1: **
 ```
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -17,14 +17,14 @@ step1:
     }
 }
 ```
-step2:
+** step2: **
 ```
 @Component
 public class MySchedule {
     @OneTask
     @Scheduled(fixedRate = 5000)
     public void exec() {
-        System.out.println("just run in single server.");
+        System.out.println("In distributed microservices, only one machine executes");
     }
 }
 ```
